@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="MHRv1" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="NHParam" representedClassName="NHParam" syncable="YES">
+        <attribute name="paramName" attributeType="String" syncable="YES"/>
+        <attribute name="paramValue" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="request" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NHRequestCache" inverseName="params" inverseEntity="NHRequestCache" syncable="YES"/>
+    </entity>
+    <entity name="NHRequestCache" representedClassName="NHRequestCache" syncable="YES">
+        <attribute name="expiryDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="httpMethod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pagePaths" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="responseFilePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" attributeType="String" syncable="YES"/>
+        <relationship name="httpHeaderFields" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="NHRequestHeader" inverseName="request" inverseEntity="NHRequestHeader" syncable="YES"/>
+        <relationship name="params" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="NHParam" inverseName="request" inverseEntity="NHParam" syncable="YES"/>
+    </entity>
+    <entity name="NHRequestHeader" representedClassName="NHRequestHeader" syncable="YES">
+        <attribute name="headerName" attributeType="String" syncable="YES"/>
+        <attribute name="headerValue" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="request" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NHRequestCache" inverseName="httpHeaderFields" inverseEntity="NHRequestCache" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="NHRequestCache" positionX="-119" positionY="59" width="128" height="148"/>
+        <element name="NHRequestHeader" positionX="-351" positionY="0" width="128" height="88"/>
+        <element name="NHParam" positionX="-353" positionY="117" width="128" height="88"/>
+    </elements>
+</model>

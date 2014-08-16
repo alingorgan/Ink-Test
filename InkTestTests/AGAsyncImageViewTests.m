@@ -41,7 +41,7 @@
     
     /**  Check if uppon completion, the image has been loaded.  */
     if (imageView.status == AGAsyncImageLoadingStatusIdle){
-        XCTAssertFalse(imageView.image == nil, @"The there is an error loading the image");
+        XCTAssertNotNil(imageView.image, @"The there is an error loading the image");
     }
 }
 

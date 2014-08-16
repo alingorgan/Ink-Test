@@ -54,9 +54,12 @@
    
     [[RequestConductor sharedConductor] performRequest:request andCompletionBlock:^(ResponseCart **responseCart) {
         
-        /**  Parse the info and notify the handler  */
-        AGWeatherInfoParser* parser = [[AGWeatherInfoParser alloc] initWithData:(*responseCart).responseData];
-        AGWeatherInfo* weatherInfo = [parser parseWeatherInfo];
+        AGWeatherInfo* weatherInfo = nil;
+        if ((*responseCart).responseData != nil){
+            /**  Parse the info  */
+            AGWeatherInfoParser* parser = [[AGWeatherInfoParser alloc] initWithData:(*responseCart).responseData];
+            weatherInfo = [parser parseWeatherInfo];
+        }
         
         dispatch_sync(dispatch_get_main_queue(), ^{
             handler(weatherInfo);

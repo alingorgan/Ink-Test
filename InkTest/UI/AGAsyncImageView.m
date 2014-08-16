@@ -25,6 +25,7 @@
 #pragma mark Accessors
 
 @synthesize blurView = _blurView;
+@synthesize status = _status;
 
 /********************************	Access Modifiers		********************************/
 #pragma mark
@@ -38,9 +39,40 @@
     return _blurView;
 }
 
+
+/********************************	Initializers		********************************/
+#pragma mark
+#pragma mark Initializers
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    if (self = [super initWithCoder:aDecoder]){
+        [self setUp];
+    }
+    
+    return self;
+}
+
+-(id)init{
+    if (self = [super init]){
+        [self setUp];
+    }
+    
+    return self;
+}
+
 /********************************	Methods		********************************/
 #pragma mark
 #pragma mark Methods
+
+
+/**
+ Makes custom preparations
+ @param none
+ @return void
+ */
+-(void)setUp{
+    self.status = AGAsyncImageLoadingStatusIdle;
+}
 
 -(void)layoutSubviews{
     [self addSubview:self.blurView];
@@ -53,6 +85,9 @@
  @return void
  */
 -(void)loadImageWithIconName:(NSString*)iconName{
+    
+    /**  We're busy  */
+    self.status = AGAsyncImageLoadingStatusWorking;
     
     /**  remove the old image  */
     [self setImage:nil];
@@ -73,6 +108,8 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self setImage:image];
+            
+            self.status = AGAsyncImageLoadingStatusIdle;
         });
     }];
 }

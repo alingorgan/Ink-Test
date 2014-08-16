@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A34B0810-1ECB-46DE-8B59-CE9A72B89D4F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>InkTest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A84EB63F-9A2F-4D51-A24E-4F7915A53FC3</key>
+		<string>https://github.com/alingorgan/Ink-Test.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>InkTest.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A84EB63F-9A2F-4D51-A24E-4F7915A53FC3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/alingorgan/Ink-Test.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A84EB63F-9A2F-4D51-A24E-4F7915A53FC3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A84EB63F-9A2F-4D51-A24E-4F7915A53FC3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Ink-Test</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -36,6 +36,9 @@
 		6E731ED919897F5500ED5791 /* AGAsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E731ED819897F5500ED5791 /* AGAsyncImageView.m */; };
 		6E731EDF19899C1B00ED5791 /* AGCityTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E731EDE19899C1B00ED5791 /* AGCityTVC.m */; };
 		6E731EE2198AC14600ED5791 /* AGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E731EE1198AC14600ED5791 /* AGNavigationController.m */; };
+		6EEDCB23199FFC57006ACEFF /* AGAsyncImageViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDCB20199FFC57006ACEFF /* AGAsyncImageViewTests.m */; };
+		6EEDCB24199FFC57006ACEFF /* AGCityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDCB21199FFC57006ACEFF /* AGCityTests.m */; };
+		6EEDCB25199FFC57006ACEFF /* AGWeatherInfoStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEDCB22199FFC57006ACEFF /* AGWeatherInfoStoreTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,9 @@
 		6E731EDE19899C1B00ED5791 /* AGCityTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCityTVC.m; sourceTree = "<group>"; };
 		6E731EE0198AC14600ED5791 /* AGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGNavigationController.h; sourceTree = "<group>"; };
 		6E731EE1198AC14600ED5791 /* AGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGNavigationController.m; sourceTree = "<group>"; };
+		6EEDCB20199FFC57006ACEFF /* AGAsyncImageViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGAsyncImageViewTests.m; sourceTree = "<group>"; };
+		6EEDCB21199FFC57006ACEFF /* AGCityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCityTests.m; sourceTree = "<group>"; };
+		6EEDCB22199FFC57006ACEFF /* AGWeatherInfoStoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGWeatherInfoStoreTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +200,9 @@
 			isa = PBXGroup;
 			children = (
 				6E731EA21988D11E00ED5791 /* InkTestTests.m */,
+				6EEDCB20199FFC57006ACEFF /* AGAsyncImageViewTests.m */,
+				6EEDCB21199FFC57006ACEFF /* AGCityTests.m */,
+				6EEDCB22199FFC57006ACEFF /* AGWeatherInfoStoreTests.m */,
 				6E731E9D1988D11E00ED5791 /* Supporting Files */,
 			);
 			path = InkTestTests;
@@ -400,7 +409,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EEDCB25199FFC57006ACEFF /* AGWeatherInfoStoreTests.m in Sources */,
+				6EEDCB24199FFC57006ACEFF /* AGCityTests.m in Sources */,
 				6E731EA31988D11E00ED5791 /* InkTestTests.m in Sources */,
+				6EEDCB23199FFC57006ACEFF /* AGAsyncImageViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +631,7 @@
 				6E731EA81988D11E00ED5791 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E731EA91988D11E00ED5791 /* Build configuration list for PBXNativeTarget "InkTestTests" */ = {
 			isa = XCConfigurationList;
@@ -627,6 +640,7 @@
 				6E731EAB1988D11E00ED5791 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

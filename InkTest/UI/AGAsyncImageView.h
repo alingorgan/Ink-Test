@@ -8,7 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, AGAsyncImageLoadingStatus){
+    AGAsyncImageLoadingStatusWorking,
+    AGAsyncImageLoadingStatusIdle
+};
+
 @interface AGAsyncImageView : UIImageView
+
+
+/********************************	Propeties		********************************/
+#pragma mark
+#pragma mark Properties
+
+@property (nonatomic) AGAsyncImageLoadingStatus status;
 
 
 /********************************	Methods		********************************/

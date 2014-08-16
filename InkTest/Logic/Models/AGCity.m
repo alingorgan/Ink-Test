@@ -36,4 +36,33 @@
     return self;
 }
 
+/********************************	Methods		********************************/
+#pragma mark
+#pragma mark Methods
+
+-(BOOL)isEqual:(id)object{
+    
+    if (![object isKindOfClass:[self class]]){
+        return NO;
+    }
+    
+    AGCity* tempCity = (AGCity*)object;
+    if (![self.name isEqualToString:tempCity.name]){
+        return NO;
+    }
+    
+    if (!(round(self.coordinates.latitude * 1000.0) == round(self.coordinates.latitude * 1000.0)
+        && round(tempCity.coordinates.longitude * 1000.0) == round(tempCity.coordinates.longitude * 1000.0))) {
+        // coordinates are not equal
+        return NO;
+        
+    }
+    
+    if (![self.country isEqualToString:tempCity.country]){
+        return NO;
+    }
+    
+    return YES;
+}
+
 @end
